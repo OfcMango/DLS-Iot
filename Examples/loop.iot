@@ -1,0 +1,8 @@
+DEVICE LED PIN 2
+
+LOOP 3
+    LED ON
+    WAIT 500
+    LED OFF
+    WAIT 500
+END

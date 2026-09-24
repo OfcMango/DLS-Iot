@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+
+App/temp_program.iot
