@@ -6,15 +6,18 @@ program
 
 statement
     : deviceDeclaration
-    | ledCommand
+    | deviceCommand
     | waitCommand
     | readCommand
     | ifStatement
     | loopStatement
     ;
 
+
+/* Device declaration */
+
 deviceDeclaration
-    : DEVICE deviceType PIN NUMBER
+    : DEVICE ID deviceType PIN NUMBER
     ;
 
 deviceType
@@ -23,17 +26,29 @@ deviceType
     | BUTTON
     ;
 
-ledCommand
-    : LED (ON | OFF)
+
+/* Device commands */
+
+deviceCommand
+    : ID (ON | OFF)
     ;
+
+
+/* Wait */
 
 waitCommand
     : WAIT NUMBER
     ;
 
+
+/* Read */
+
 readCommand
-    : READ deviceType
+    : READ ID
     ;
+
+
+/* If statement */
 
 ifStatement
     : IF condition
@@ -42,8 +57,11 @@ ifStatement
       END
     ;
 
+
+/* Conditions */
+
 condition
-    : deviceType comparisonOperator NUMBER
+    : ID comparisonOperator NUMBER
     ;
 
 comparisonOperator
@@ -51,6 +69,9 @@ comparisonOperator
     | LESS
     | EQUAL
     ;
+
+
+/* Loop */
 
 loopStatement
     : LOOP NUMBER

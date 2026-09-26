@@ -742,21 +742,26 @@ def clear_editor():
 
 def load_example():
 
-    example_program = """DEVICE LED PIN 2
-DEVICE TEMP PIN 34
+    example_program = example_program = """DEVICE myLED LED PIN 2
+DEVICE roomTemp TEMP PIN 34
+DEVICE myButton BUTTON PIN 4
 
-READ TEMP
+myLED ON
+WAIT 1000
+myLED OFF
 
-IF TEMP > 30
-    LED ON
+READ roomTemp
+
+IF roomTemp > 30
+    myLED ON
 ELSE
-    LED OFF
+    myLED OFF
 END
 
 LOOP 3
-    LED ON
+    myLED ON
     WAIT 500
-    LED OFF
+    myLED OFF
     WAIT 500
 END
 """
@@ -1225,21 +1230,26 @@ program_text.tag_configure(
 # DEFAULT EXAMPLE
 # ============================================================
 
-example_program = """DEVICE LED PIN 2
-DEVICE TEMP PIN 34
+example_program = example_program = example_program = """DEVICE myLED LED PIN 2
+DEVICE roomTemp TEMP PIN 34
+DEVICE myButton BUTTON PIN 4
 
-READ TEMP
+myLED ON
+WAIT 1000
+myLED OFF
 
-IF TEMP > 30
-    LED ON
+READ roomTemp
+
+IF roomTemp > 30
+    myLED ON
 ELSE
-    LED OFF
+    myLED OFF
 END
 
 LOOP 3
-    LED ON
+    myLED ON
     WAIT 500
-    LED OFF
+    myLED OFF
     WAIT 500
 END
 """

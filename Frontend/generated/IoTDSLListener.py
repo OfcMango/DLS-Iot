@@ -44,12 +44,12 @@ class IoTDSLListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by IoTDSLParser#ledCommand.
-    def enterLedCommand(self, ctx:IoTDSLParser.LedCommandContext):
+    # Enter a parse tree produced by IoTDSLParser#deviceCommand.
+    def enterDeviceCommand(self, ctx:IoTDSLParser.DeviceCommandContext):
         pass
 
-    # Exit a parse tree produced by IoTDSLParser#ledCommand.
-    def exitLedCommand(self, ctx:IoTDSLParser.LedCommandContext):
+    # Exit a parse tree produced by IoTDSLParser#deviceCommand.
+    def exitDeviceCommand(self, ctx:IoTDSLParser.DeviceCommandContext):
         pass
 
 

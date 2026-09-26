@@ -1,0 +1,11 @@
+DEVICE myLED LED PIN 2
+DEVICE roomTemp TEMP PIN 34
+DEVICE myButton BUTTON PIN 4
+
+READ roomTemp
+
+IF roomTemp > 30
+    myLED ON
+ELSE
+    myLED OFF
+END
